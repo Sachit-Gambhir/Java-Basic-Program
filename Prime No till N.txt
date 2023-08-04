@@ -1,0 +1,20 @@
+/* Print Prime No till N */
+class PrimeNotillN {
+    public static void main(String[] args) {
+        int n=21;
+        for(int r = 0; r<=n; r++){
+            int c=0;
+            for(int div=2; div*div<=r; div++){
+                if(r%div==0){
+                     c++;
+                     break;
+                }
+            }
+            if(c==0 && r!=1){
+                    System.out.print(r+" ");
+                }
+        }
+  }
+}
+
+Output: for n=21  0 2 3 5 7 11 13 17 19

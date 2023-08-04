@@ -1,0 +1,21 @@
+/* Prime or Not */
+class isPrime {
+    public static void main(String[] args) {
+        int x = 31;
+        int c = 0;
+        for(int div=2; div*div<=x; div++){
+            if(x%div==0){
+                c++;
+                break;
+            }
+        }
+        if(c>2){
+            System.out.println("Prime");
+        }
+        else{
+            System.out.println("Not Prime");
+        }
+    }
+}
+
+Output: N=31  Not Prime

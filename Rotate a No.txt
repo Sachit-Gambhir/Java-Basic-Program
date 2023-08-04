@@ -1,0 +1,36 @@
+/* Rotate a No. */
+class RotateNo {
+    public static void main(String[] args) {
+        int n = 921453;
+        int rf = -2;
+        
+        int temp=n,nod=0;
+        while(temp!=0){
+            temp=temp/10;
+            nod++;
+        }
+        
+        rf = rf % nod;
+        if(rf<0){
+            rf = rf + nod;
+        }
+        
+        int div = 1,mul = 1;
+        for(int i=0; i<nod; i++){
+            if(i<rf){
+                div = div *10;
+            }
+            else{
+                mul = mul *10;
+            }
+        }
+        
+        int q = n / div;
+        int r = n%div;
+        int rot = r*mul+q;
+        System.out.print("Value: "+rot);
+    }
+}
+
+
+Output: 145392 for rf=-2

@@ -1,0 +1,25 @@
+/* Inverse of No for no 1-n digits */
+class InverseNo {
+    public static void main(String[] args) {
+        int n = 21453;
+        int op = 1;
+        
+        int nt=0;
+        while(n!=0){
+            int od = n%10;
+            
+            int id = op;
+            int ip = od;
+            nt = nt + id*((int)Math.pow(10,ip-1));
+            n = n/10;
+            op++;
+        }
+        System.out.print(nt);
+    }
+}
+
+Input:    2 1 4 5 3
+Position: 5 4 3 2 1
+
+Position: 5 4 3 2 1
+Output:   2 3 1 5 4
